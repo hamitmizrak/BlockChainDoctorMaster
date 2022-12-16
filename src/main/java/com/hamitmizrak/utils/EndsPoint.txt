@@ -1,0 +1,35 @@
+//Register (POST)
+http://localhost:8080/api/authentication/register
+{
+   "name":"name4",
+   "username":"root4",
+    "password":"root4"
+}
+
+
+//Login (POST)
+http://localhost:8080/api/authentication/login
+{
+   "username":"root",
+   "password":"root"
+}
+
+Authorization: Bearer Token
+JWT üretecek:
+eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiJyb290IiwidXNlcklkIjoyLCJyb2xlcyI6IlVTRVIiLCJleHAiOjE2Njk0NTg3NTV9.D-Ij4U6n3UnPp0KJR5DugUPiDkyL8_JNtQdFU0rtB8jZ1c6Z9bw_qy2ODZZ0_2eCNq7NXf81zcSKUWDXw7ZUrcybIfC205uZEicvWiCbd8HJh9j_d8GZw60gTWBfpPojNxDdhf9tflrgHqg4t3ZDjo8FO7i8Y0MufONs0QU9Gu9xMVZx3xhYiASt4cYs2ExdIvj3I4kkwRlVwhW0fNoHRYQNdJglfH2P1m9xHSl1ILjOMFF4VtsJ7ZNsiPgcdfkMdnWgVI0ffCQ6xNrYK4K3-WRp7BduuPBOlgMCDAcbFNzw5ezjZ-JfKf6ksT9oHvLvckyCQ89XQ85ftKkNKsrR-Q
+
+
+// BlockChain
+http://localhost:8080/api/v1/create/blockchains/patients
+{
+    "name":"hasta adı 33",
+    "surname":"hasta soyadı 33",
+    "diagnosis":"teşhis 33",
+    "tcNumber":"hasta tc 333"
+}
+
+//Yenilikler
+Katmanlı mimari
+Hash algoritması
+API yazıldı
+JWT Token ile sisiteme giriş yapıldı
