@@ -40,7 +40,6 @@ public class BlockChainRestApi implements IBlockChainApiRest {
     private final IBlockService blockService;
 
 
-
     //speed data
     @Override
     public String getSpeedData() {
@@ -53,8 +52,10 @@ public class BlockChainRestApi implements IBlockChainApiRest {
     @Override
     @PostMapping("/create/blockchains/patients")
     public ResponseEntity<?> createPatientBlockChain(@RequestBody PatientDto patientDto) {
-         blockService.createBlockchain(patientDto);
-        ApiResult apiResult = new ApiResult(200, PATH, "Created");
+        boolean result = true;
+        ApiResult apiResult = null;
+        blockService.createBlockchain(patientDto);
+        apiResult = new ApiResult(200, PATH, "Created");
         return ResponseEntity.ok(apiResult);
     }
 
@@ -65,17 +66,17 @@ public class BlockChainRestApi implements IBlockChainApiRest {
     @GetMapping("/list/blockchains/patients")
     public ResponseEntity<?> listPatientBlockChain() {
         List<BlockEntity> blockChain = (ArrayList<BlockEntity>) blockService.getAllBlockchains();
-        String sum[]=new String[blockChain.size()]  ;
+        String sum[] = new String[blockChain.size()];
 
-        for (int i = 0; i <blockChain.size() ; i++) {
+        for (int i = 0; i < blockChain.size(); i++) {
             //bütün zincir
-            sum[i]= String.valueOf(blockChain.get(i));
+            sum[i] = String.valueOf(blockChain.get(i));
         }
 
         String result = "";
-        for (int i = 0; i <sum.length ; i++) {
+        for (int i = 0; i < sum.length; i++) {
             //bütün zincir
-            result+= sum[i];
+            result += sum[i];
             System.out.println(result);
         }
         return ResponseEntity.ok(blockService.getAllBlockchains());

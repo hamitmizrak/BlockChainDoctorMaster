@@ -10,11 +10,6 @@ import java.util.List;
 
 @Repository
 public interface IBlockRepository extends JpaRepository<BlockEntity,Long> {
-
-   /* @Query("BlockEntity a  left join PatientEntity b on a.id=b.id")
-    public List<BlockEntity> FindAllWithDescriptionQuery();
-*/
-
     List<BlockEntity> findAllByPatientEntity_Id(Long id);
 
 
