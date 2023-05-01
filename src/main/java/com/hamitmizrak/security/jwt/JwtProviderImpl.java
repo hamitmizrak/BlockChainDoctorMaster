@@ -53,6 +53,7 @@ public class JwtProviderImpl implements IJwtProvider {
             //Java security RSA kullanıdğımızı belirtmemiz için kullanıyoruz
             KeyFactory keyFactory = getKeyFactory();
 
+
             //gizli ve ozel anahtarlar Base64 anahtarlama olduğunda açmamız gerekiyor.
             Base64.Decoder decoder = Base64.getDecoder();
 

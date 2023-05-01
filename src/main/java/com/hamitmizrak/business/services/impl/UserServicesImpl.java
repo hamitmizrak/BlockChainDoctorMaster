@@ -50,6 +50,7 @@ public class UserServicesImpl implements IUserServices {
             userDto.setPassword(passwordEncoderBean.passwordEncoderMethod().encode(userDto.getPassword()));
             UserEntity userEntity=DtoToEntity(userDto);
             repository.save(userEntity);
+            userDto.setId(userEntity.getId());
         }
         return userDto;
     }
