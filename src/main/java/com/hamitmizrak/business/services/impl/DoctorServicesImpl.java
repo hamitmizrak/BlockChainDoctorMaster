@@ -109,6 +109,7 @@ public class DoctorServicesImpl implements IDoctorService  {
             doctorEntity.setTcNumber(employeeDto.getTcNumber());
             doctorEntity.setTitle(employeeDto.getTitle());
             repository.save(doctorEntity);
+            employeeDto.setId(doctorEntity.getId());
         }
         return employeeDto;
     }

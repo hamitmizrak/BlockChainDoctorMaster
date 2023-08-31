@@ -113,6 +113,7 @@ public class PatientServicesImpl implements IPatientService {
             patientEntity.setTcNumber(patientDto.getTcNumber());
             patientEntity.setDiagnosis(patientDto.getDiagnosis());
             repository.save(patientEntity);
+            patientDto.setId(patientEntity.getId());
         }
         return patientDto;
     }

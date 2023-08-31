@@ -48,7 +48,7 @@ public class PatientRestApi implements IPatientApiRest {
         return ResponseEntity.ok(apiResult);
     }
 
-    //LIST
+    // LIST
     //http://localhost:8080/api/v1/patients
     @Override
     @GetMapping("/patients")
@@ -57,8 +57,8 @@ public class PatientRestApi implements IPatientApiRest {
         return ResponseEntity.ok(list);
     }
 
-    //FIND
-    //http://localhost:8080/api/v1/patients/1
+    // FIND
+    // http://localhost:8080/api/v1/patients/1
     @Override
     @GetMapping("/patients/{id}")
     public ResponseEntity<PatientDto> getPatientById(@PathVariable(name="id")  Long id) {
@@ -76,8 +76,8 @@ public class PatientRestApi implements IPatientApiRest {
         return ResponseEntity.ok(response);
     }
 
-    //UPDATE
-    //http://localhost:8080/employee/api/v1/patients/1
+    // UPDATE
+    // http://localhost:8080/api/v1/patients/1
     @Override
     @PutMapping("/patients/{id}")
     public ResponseEntity<PatientDto> updatePatient(@Valid @PathVariable(name="id") Long id, @RequestBody PatientDto patientDto) {

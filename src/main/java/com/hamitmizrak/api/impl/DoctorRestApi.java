@@ -65,8 +65,8 @@ public class DoctorRestApi implements IDoctorApiRest {
         return ResponseEntity.ok(service.getDoctorById(id));
     }
 
-    //DELETE
-    //http://localhost:8080/api/v1/doctors/1
+    // DELETE
+    // http://localhost:8080/api/v1/doctors/1
     @Override
     @DeleteMapping("/doctors/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteDoctor(@PathVariable(name="id")  Long id) {
@@ -76,8 +76,8 @@ public class DoctorRestApi implements IDoctorApiRest {
         return ResponseEntity.ok(response);
     }
 
-    //UPDATE
-    //http://localhost:8080/employee/api/v1/employees/1
+    // UPDATE
+    // http://localhost:8080/api/v1/doctors/1
     @Override
     @PutMapping("/doctors/{id}")
     public ResponseEntity<DoctorDto> updateDoctor(@Valid @PathVariable(name="id") Long id, @RequestBody DoctorDto doctorDto) {
